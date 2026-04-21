@@ -1,0 +1,22 @@
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int len = numbers.length;
+
+        int l = 0;
+        int r = len-1;
+
+        while(l<r){
+            int sum = numbers[l]+numbers[r];
+            if(sum==target){
+                return new int[]{l+1,r+1};
+            }
+            if(sum<target){
+                l++;
+            }
+            if(sum>target){
+                r--;
+            }
+        }
+        return new int[]{};
+    }
+}
